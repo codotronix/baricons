@@ -6,7 +6,7 @@ body {
 	font-family: 'K2D', sans-serif;
 }
 
-.barick-chat-container-1 {
+.barick-chat-container {
 	width: 350px;
 	position: relative;
     margin: 0 auto;
@@ -15,16 +15,16 @@ body {
     background: deepskyblue;
 }
 
-.barick-chat-container-1 .chat-accumulator {
+.barick-chat-container .chat-accumulator {
 	height: 400px;
 }
 
-.barick-chat-container-1 .chat-titlebar {
+.barick-chat-container .chat-titlebar {
     /*background: #00bfff;*/
     height: 30px;
 }
 
-.barick-chat-container-1 .chat-title {
+.barick-chat-container .chat-title {
     color: #fff;
     font-size: 20px;
     position: absolute;
@@ -33,18 +33,34 @@ body {
     max-width: 90%;
 }
 
-.barick-chat-container-1 .chat-accumulator {
+.barick-chat-container .chat-accumulator {
     background: #9fffca;
     border: 5px solid #00bfff;
     padding: 10px;
     overflow: auto;
 }
 
-.barick-chat-container-1 .chat-input-area {
+.barick-chat-container .chat-input-area {
     position: relative;
 }
 
-.barick-chat-container-1 .chat-input {
+.barick-chat-container .baricons-container {
+    height: 250px;
+    width: 260px;
+    border: 1px solid #bbb;
+    background: #fff;
+    position: absolute;
+    bottom: 89px;
+    right: -300px;
+    transition: all .4s ease-out;
+    overflow: auto;
+}
+
+.barick-chat-container .baricons-container.visible {
+    right: 5px;
+}
+
+.barick-chat-container .chat-input {
     width: 100%;
     display: inline-block;
     resize: none;
@@ -54,7 +70,7 @@ body {
     overflow: auto;
 }
 
-.barick-chat-container-1 .chat-input-right-toolbox {
+.barick-chat-container .chat-input-right-toolbox {
 	width: 35px;
     height: 80px;
     /*background: deepskyblue;*/
@@ -64,7 +80,7 @@ body {
     border-left: 1px solid deepskyblue;
 }
 
-.barick-chat-container-1 .send-btn {
+.barick-chat-container .send-btn {
     font-size: 22px;
     display: block;
     width: 100%;
@@ -72,7 +88,7 @@ body {
     color: #fff;
 }
 
-.chatlet {
+.barick-chat-container .chatlet {
 	background: #fff;
     padding: 5px 10px;
     border-radius: 4px;
@@ -81,18 +97,26 @@ body {
     font-size: 16px;
 }
 
-.chatlet.auto-chatlet {
+.barick-chat-container .chatlet.auto-chatlet {
 	float: left;
 }
 
-.chatlet.user-chatlet {
+.barick-chat-container .chatlet.user-chatlet {
 	float: right;
 }
 
-#show-smiley {
+.barick-chat-container .show-smiley {
     height: 33px;
     width: 33px;
     background: url('./img/sample-icons-spritesheet-40px.jpg') -7px -8px no-repeat;
     overflow: hidden;
     margin-top: 2px;
 } 
+
+.barick-chat-container .icon-span {
+    display: inline-block;
+    float: left;
+    height: 40px;
+    width: 40px;
+    background: url('./img/sample-icons-spritesheet-40px.jpg') 0 0 no-repeat;
+}

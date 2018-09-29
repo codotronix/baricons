@@ -9,21 +9,26 @@
 	<h1>Baricons Demo</h1>
 	<p>Try icons in the chatbox below</p>
 
-	<div class="barick-chat-container-1">
+	<div class="barick-chat-container">
 		<div class="chat-titlebar">
 			<label class="chat-title">Baricons Demo Chat</label>
 		</div>
 		<div class="chat-accumulator"></div>
 		<div class="chat-input-area">
+			<div class="baricons-container"></div>
 			<textarea class="chat-input" placeholder="type something here..."></textarea>
 			<div class="chat-input-right-toolbox">
-				<button type="button" id="show-smiley"></button>
+				<button type="button" class="show-smiley"></button>				
 			</div>
 		</div>
 		<button type="button" class="send-btn">Send</button>
 	</div>
 
 	<script type="text/javascript" src="js/jquery-2.2.4.min.js"></script>
+
+	<script type="text/javascript" src="js/baricons-config.js"></script>
+	<script type="text/javascript" src="js/baricons.js"></script>
+
 	<script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>

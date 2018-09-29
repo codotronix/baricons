@@ -1,4 +1,8 @@
 $(function(){
+	$('.barick-chat-container').each(function(index, el){
+		createIconPanel($(el).find('.baricons-container'), index);
+	});
+
 	$('.send-btn').click(function(){
 		sendChat();
 	});
@@ -7,6 +11,14 @@ $(function(){
 		if(e.keyCode === 13) {
 			sendChat();
 		}
+	});
+
+	$('body').on('click', '.barick-chat-container .show-smiley', function () {
+		$(this).closest('.barick-chat-container').find('.baricons-container').toggleClass('visible');
+	});
+
+	$('body').on('click', '.barick-chat-container .icon-span', function(){
+		
 	});
 
 	function sendChat () {
@@ -45,7 +57,22 @@ $(function(){
 		
 	}
 
+
+
+	function createIconPanel (el, idx) {
+		var w=40, h=38.12, htm = '', id;
+		for(var x=0; x<10; x++) {
+			for(var y=0; y<8; y++) {
+				id = 'baricon-' + idx + '-' + x + '-' + y;
+				htm += '<span id=' +id+ ' class="icon-span" style="background-position-x: -' + w*x + 'px; background-position-y: -' + h*y + 'px;"></span>';				
+			}
+		}
+
+		el.append(htm);
+	}
+
 	$('.chat-input').focus();
+	createIconPanel();
 	autoChat();
 
 });
