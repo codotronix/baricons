@@ -88,3 +88,11 @@ body {
 .chatlet.user-chatlet {
 	float: right;
 }
+
+#show-smiley {
+    height: 33px;
+    width: 33px;
+    background: url('./img/sample-icons-spritesheet-40px.jpg') -7px -8px no-repeat;
+    overflow: hidden;
+    margin-top: 2px;
+} 
